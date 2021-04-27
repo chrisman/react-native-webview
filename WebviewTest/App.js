@@ -1,22 +1,36 @@
 import React from 'react';
+import {SafeAreaView} from 'react-native';
 import {WebView} from 'react-native-webview';
 
 export default function App() {
   const tasks = `
-    setTimeout(function () {
-      window.ReactNativeWebView.postMessage("Hello!")
-    }, 2000)
+    window.myConfig=[
+      {
+        id: 'todo-0',
+        name: 'ha',
+        isComplete: true,
+      },
+      {
+        id: 'todo-1',
+        name: 'haha',
+        isComplete: false,
+      },
+      {
+        id: 'todo-2',
+        name: 'hahaha',
+        isComplete: true,
+      },
+    ];
     true; // note: this is required, or you'll sometimes get silent failures
   `;
 
   return (
-    <WebView
-      marginTop="20%"
-      onMessage={(event) => {
-        alert(event.nativeEvent.data);
-      }} // required for injectedJavascript
-      injectedJavaScript={tasks}
-      source={require('./dist/index.html')}
-    />
+    <SafeAreaView style={{flex: 1}}>
+      <WebView
+        injectedJavaScriptBeforeContentLoaded={tasks}
+        javaScriptEnabled={true}
+        source={require('./dist/index.html')}
+      />
+    </SafeAreaView>
   );
 }

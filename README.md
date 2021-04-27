@@ -28,5 +28,10 @@ Setting up your RN dev environment is beyond the scope of these instructions.
 
 ## Todo
 
-- [ ] pass config/initial state from RN to the React app
-- [ ] confirm that Android is working
+- [ ] confirm that Android is working: It is *not* working.
+
+    - https://github.com/react-native-webview/react-native-webview/blob/master/docs/Guide.md#loading-local-html-files
+    - https://github.com/react-native-webview/react-native-webview/issues/428
+    - https://github.com/react-native-webview/react-native-webview/issues/518
+
+    Look into running a [static http server](https://github.com/futurepress/react-native-static-server)?

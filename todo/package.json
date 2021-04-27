@@ -15,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "put": "react-scripts build && npx gulp && cp build/index.html ../WebviewTest/dist/"
   },
   "eslintConfig": {
     "extends": [
