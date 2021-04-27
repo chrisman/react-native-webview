@@ -1,0 +1,23 @@
+[
+  {
+    "id": "todo-0",
+    "name": "Eat",
+    "isComplete": true
+  },
+  {
+    "id": "todo-1",
+    "name": "Sleep",
+    "isComplete": false
+  },
+  {
+    "id": "todo-2",
+    "name": "Wash",
+    "isComplete": true
+  },
+  {
+    "id": "todo-3",
+    "name": "Poop",
+    "isComplete": true
+  }
+]
+
